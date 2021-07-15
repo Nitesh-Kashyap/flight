@@ -1,0 +1,17 @@
+<p class="text-dark py-4 text-center">Flights - New Year Eve - 2021</p>
+<p class="text-dark py-4 text-center"><strong>Welocome to Flight Booking System! You can book here flights available with us at affordable price.</strong><i class="fa fa-plane" style="font-size:36px;"></i> </p>
+<p class="text-success py-5 text-center"><strong>Early bird offer get an discount of 10% on your flight bookings.</strong> <i class="fa fa-users" style="font-size:48px;color:green"></i></p>
+<hr>
+<div class="container">
+	<div class="row">
+		<%if current_user && current_user.type == "UserAdmin"%>
+		<div class="col">
+			<%= link_to "New Flight", new_airplane_path, :class => 'btn btn-warning btn-block' %>
+		</div>
+		<%end%>
+		<div class="col">
+			<%= link_to "New Booking", airplanes_path, :class => 'btn btn-success btn-block' %>
+		</div>
+
+	</div>
+</div>

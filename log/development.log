@@ -1,0 +1,1403 @@
+Started GET "/" for ::1 at 2021-07-15 21:00:50 +0530
+  
+PG::ConnectionBad (FATAL:  password authentication failed for user "pavanagrawalindia2"
+):
+  
+pg (1.2.3) lib/pg.rb:58:in `initialize'
+pg (1.2.3) lib/pg.rb:58:in `new'
+pg (1.2.3) lib/pg.rb:58:in `connect'
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:692:in `connect'
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.6) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.6) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.6) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "fligh_development" ENCODING = 'utf8'[0m
+  ↳ bin/rails:4
+  [1m[35m (1690.2ms)[0m  [1m[35mCREATE DATABASE "fligh_development" ENCODING = 'utf8'[0m
+  ↳ bin/rails:4
+  [1m[35m (1024.2ms)[0m  [1m[35mCREATE DATABASE "flight_test" ENCODING = 'utf8'[0m
+  ↳ bin/rails:4
+  [1m[35m (186.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (140.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8244566241476132085)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsers (20190201021439)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (214.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "phone" integer, "type" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190201021439_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190201021439"]]
+  ↳ bin/rails:4
+  [1m[35m (41.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddColumnToUser (20190201141847)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  ↳ db/migrate/20190201141847_add_column_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190201141847"]]
+  ↳ bin/rails:4
+  [1m[35m (29.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateAirplanes (20190201155821)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (106.9ms)[0m  [1m[35mCREATE TABLE "airplanes" ("id" bigserial primary key, "name" character varying, "seats" integer, "category" character varying, "rows" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190201155821_create_airplanes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190201155821"]]
+  ↳ bin/rails:4
+  [1m[35m (32.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreateBookings (20190201160157)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (126.7ms)[0m  [1m[35mCREATE TABLE "bookings" ("id" bigserial primary key, "pnr" character varying, "origin" character varying, "destination" character varying, "price" decimal, "airplane_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_3c8fc62e40"
+FOREIGN KEY ("airplane_id")
+  REFERENCES "airplanes" ("id")
+)[0m
+  ↳ db/migrate/20190201160157_create_bookings.rb:3
+  [1m[35m (68.0ms)[0m  [1m[35mCREATE  INDEX  "index_bookings_on_airplane_id" ON "bookings"  ("airplane_id")[0m
+  ↳ db/migrate/20190201160157_create_bookings.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190201160157"]]
+  ↳ bin/rails:4
+  [1m[35m (46.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddColumnToAirplane (20190202101528)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "airplanes" ADD "source" character varying[0m
+  ↳ db/migrate/20190202101528_add_column_to_airplane.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "airplanes" ADD "destination" character varying[0m
+  ↳ db/migrate/20190202101528_add_column_to_airplane.rb:4
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "airplanes" ADD "price" float[0m
+  ↳ db/migrate/20190202101528_add_column_to_airplane.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202101528"]]
+  ↳ bin/rails:4
+  [1m[35m (26.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddColumnToBooking (20190202101748)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "bookings" ADD "status" character varying[0m
+  ↳ db/migrate/20190202101748_add_column_to_booking.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "bookings" ADD "name" character varying[0m
+  ↳ db/migrate/20190202101748_add_column_to_booking.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202101748"]]
+  ↳ bin/rails:4
+  [1m[35m (28.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to RemoveColumnFromBooking (20190202101858)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "bookings" DROP COLUMN "origin"[0m
+  ↳ db/migrate/20190202101858_remove_column_from_booking.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "bookings" DROP COLUMN "destination"[0m
+  ↳ db/migrate/20190202101858_remove_column_from_booking.rb:4
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "bookings" DROP COLUMN "price"[0m
+  ↳ db/migrate/20190202101858_remove_column_from_booking.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190202101858"]]
+  ↳ bin/rails:4
+  [1m[35m (25.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddColumnToBook (20190203062131)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "bookings" ADD "age" integer[0m
+  ↳ db/migrate/20190203062131_add_column_to_book.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "bookings" ADD "passport_id" character varying[0m
+  ↳ db/migrate/20190203062131_add_column_to_book.rb:4
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "bookings" ADD "passenger1" character varying[0m
+  ↳ db/migrate/20190203062131_add_column_to_book.rb:5
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "bookings" ADD "passenger2" character varying[0m
+  ↳ db/migrate/20190203062131_add_column_to_book.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190203062131"]]
+  ↳ bin/rails:4
+  [1m[35m (23.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to CreatePayments (20190506161713)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (106.2ms)[0m  [1m[35mCREATE TABLE "payments" ("id" bigserial primary key, "name" character varying, "card_number" integer, "cvv" integer, "month" integer, "year" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190506161713_create_payments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190506161713"]]
+  ↳ bin/rails:4
+  [1m[35m (32.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddResetPassCodeToUser (20190512072658)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_pass_code" character varying[0m
+  ↳ db/migrate/20190512072658_add_reset_pass_code_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190512072658"]]
+  ↳ bin/rails:4
+  [1m[35m (29.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to ChangeIntegerLimitInPaymentTable (20190517035514)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (108.9ms)[0m  [1m[35mALTER TABLE "payments" ALTER COLUMN "card_number" TYPE bigint[0m
+  ↳ db/migrate/20190517035514_change_integer_limit_in_payment_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190517035514"]]
+  ↳ bin/rails:4
+  [1m[35m (31.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-15 15:38:54.713433"], ["updated_at", "2021-07-15 15:38:54.713433"]]
+  ↳ bin/rails:4
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(8244566241476132085)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2021-07-15 21:09:11 +0530
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 868ms (Views: 863.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:12:57 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:14:11 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:21:41 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:22:01 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:22:27 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:22:55 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:24:18 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:24:49 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 33ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:26:01 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:26:19 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:26:20 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:28:58 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:30:21 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:30:38 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:31:58 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-07-15 21:31:59 +0530
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 21:33:10 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 21:35:03 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-07-15 21:35:26 +0530
+Processing by UsersController#verify_login as HTML
+  Rendering users/verify_login.html.erb within layouts/application
+  Rendered users/verify_login.html.erb within layouts/application (1716.0ms)
+Completed 200 OK in 1737ms (Views: 1736.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 21:35:47 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/airplanes" for ::1 at 2021-07-15 21:36:21 +0530
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.7ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:17
+  Rendered airplanes/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 58ms (Views: 22.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 21:36:29 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummy@flight.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mUserAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "type", "created_at", "updated_at", "password_digest") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Nitesh"], ["email", "dummy@flight.com"], ["type", "UserAdmin"], ["created_at", "2021-07-15 16:06:42.025025"], ["updated_at", "2021-07-15 16:06:42.025025"], ["password_digest", "$2a$12$jmgiKi8wUjXjyWq5uBl25OmwtwaLSLUZBOIl.CUg4uNIBHWtY6dci"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (29.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "airplanes" WHERE "airplanes"."name" = $1 LIMIT $2[0m  [["name", "Raymundo Murray"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummy@flight.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "airplanes" WHERE "airplanes"."name" = $1 LIMIT $2[0m  [["name", "Mrs. Carita Cummerata"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.4ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "seats", "category", "rows", "created_at", "updated_at", "source", "destination", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mrs. Carita Cummerata"], ["seats", 19], ["category", "Buisness"], ["rows", "0"], ["created_at", "2021-07-15 16:13:26.912051"], ["updated_at", "2021-07-15 16:13:26.912051"], ["source", "WA"], ["destination", "IL"], ["price", 41061.69]]
+  ↳ db/seeds.rb:11
+  [1m[35m (141.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "airplanes" WHERE "airplanes"."name" = $1 LIMIT $2[0m  [["name", "Hai Okuneva"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.7ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "seats", "category", "rows", "created_at", "updated_at", "source", "destination", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Hai Okuneva"], ["seats", 39], ["category", "Buisness"], ["rows", "5"], ["created_at", "2021-07-15 16:13:27.061515"], ["updated_at", "2021-07-15 16:13:27.061515"], ["source", "NY"], ["destination", "IN"], ["price", 20916.48]]
+  ↳ db/seeds.rb:11
+  [1m[35m (26.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "airplanes" WHERE "airplanes"."name" = $1 LIMIT $2[0m  [["name", "Quiana Hessel"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.8ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "seats", "category", "rows", "created_at", "updated_at", "source", "destination", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Quiana Hessel"], ["seats", 81], ["category", "Buisness"], ["rows", "1"], ["created_at", "2021-07-15 16:13:27.097850"], ["updated_at", "2021-07-15 16:13:27.097850"], ["source", "HI"], ["destination", "ME"], ["price", 56081.19]]
+  ↳ db/seeds.rb:11
+  [1m[35m (26.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "airplanes" WHERE "airplanes"."name" = $1 LIMIT $2[0m  [["name", "Tierra Fahey"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.4ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "seats", "category", "rows", "created_at", "updated_at", "source", "destination", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Tierra Fahey"], ["seats", 71], ["category", "Buisness"], ["rows", "7"], ["created_at", "2021-07-15 16:13:27.133666"], ["updated_at", "2021-07-15 16:13:27.133666"], ["source", "MS"], ["destination", "WI"], ["price", 16087.36]]
+  ↳ db/seeds.rb:11
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "airplanes" WHERE "airplanes"."name" = $1 LIMIT $2[0m  [["name", "Prof. Audrea D'Amore"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.7ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "seats", "category", "rows", "created_at", "updated_at", "source", "destination", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Prof. Audrea D'Amore"], ["seats", 55], ["category", "Buisness"], ["rows", "5"], ["created_at", "2021-07-15 16:13:27.170093"], ["updated_at", "2021-07-15 16:13:27.170093"], ["source", "OK"], ["destination", "MT"], ["price", 77636.05]]
+  ↳ db/seeds.rb:11
+  [1m[35m (25.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dummy@flight.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "airplanes" WHERE "airplanes"."name" = $1 LIMIT $2[0m  [["name", "Kathern Jacobs"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.3ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "seats", "category", "rows", "created_at", "updated_at", "source", "destination", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kathern Jacobs"], ["seats", 34], ["category", "Buisness"], ["rows", "4"], ["created_at", "2021-07-15 16:14:32.355165"], ["updated_at", "2021-07-15 16:14:32.355165"], ["source", "TX"], ["destination", "AK"], ["price", 2300.394]]
+  ↳ db/seeds.rb:11
+  [1m[35m (109.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "airplanes" WHERE "airplanes"."name" = $1 LIMIT $2[0m  [["name", "Roselyn Anderson"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.7ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "seats", "category", "rows", "created_at", "updated_at", "source", "destination", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Roselyn Anderson"], ["seats", 66], ["category", "Buisness"], ["rows", "6"], ["created_at", "2021-07-15 16:14:32.471604"], ["updated_at", "2021-07-15 16:14:32.471604"], ["source", "SC"], ["destination", "MI"], ["price", 1744.745]]
+  ↳ db/seeds.rb:11
+  [1m[35m (26.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "airplanes" WHERE "airplanes"."name" = $1 LIMIT $2[0m  [["name", "Mozell Cummings"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.7ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "seats", "category", "rows", "created_at", "updated_at", "source", "destination", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mozell Cummings"], ["seats", 76], ["category", "Buisness"], ["rows", "5"], ["created_at", "2021-07-15 16:14:32.507269"], ["updated_at", "2021-07-15 16:14:32.507269"], ["source", "SD"], ["destination", "IN"], ["price", 7631.196]]
+  ↳ db/seeds.rb:11
+  [1m[35m (27.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "airplanes" WHERE "airplanes"."name" = $1 LIMIT $2[0m  [["name", "Jackie Heller"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.8ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "seats", "category", "rows", "created_at", "updated_at", "source", "destination", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Jackie Heller"], ["seats", 72], ["category", "Buisness"], ["rows", "9"], ["created_at", "2021-07-15 16:14:32.542996"], ["updated_at", "2021-07-15 16:14:32.542996"], ["source", "ID"], ["destination", "SD"], ["price", 8967.351]]
+  ↳ db/seeds.rb:11
+  [1m[35m (27.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "airplanes" WHERE "airplanes"."name" = $1 LIMIT $2[0m  [["name", "Kathe Rodriguez"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mAirplane Create (0.7ms)[0m  [1m[32mINSERT INTO "airplanes" ("name", "seats", "category", "rows", "created_at", "updated_at", "source", "destination", "price") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Kathe Rodriguez"], ["seats", 29], ["category", "Buisness"], ["rows", "1"], ["created_at", "2021-07-15 16:14:32.578597"], ["updated_at", "2021-07-15 16:14:32.578597"], ["source", "OR"], ["destination", "TN"], ["price", 4265.954]]
+  ↳ db/seeds.rb:11
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+Started GET "/home" for ::1 at 2021-07-15 21:44:47 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 203ms (Views: 198.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/airplanes" for ::1 at 2021-07-15 21:44:50 +0530
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.8ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:17
+  Rendered airplanes/index.html.erb within layouts/application (111.4ms)
+Completed 200 OK in 153ms (Views: 141.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 21:45:48 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 21:45:53 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 21:45:54 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 21:50:27 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 21:51:06 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 21:55:07 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 21:58:28 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:03:07 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:03:13 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:06:27 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:06:47 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:06:48 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:06:49 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:08:29 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:08:46 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:12:58 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-07-15 22:13:12 +0530
+Processing by UsersController#verify_login as HTML
+  Rendering users/verify_login.html.erb within layouts/application
+  Rendered users/verify_login.html.erb within layouts/application (180.1ms)
+Completed 200 OK in 193ms (Views: 192.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:13:18 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:14:24 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:14:25 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:15:20 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:15:22 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:15:23 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 73ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:15:24 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 63ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:17:05 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:23:59 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:24:34 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:28:10 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:30:45 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:30:46 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:30:47 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:30:47 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:31:25 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:33:27 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:33:51 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:34:42 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:35:53 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:38:35 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:42:31 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:42:32 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:45:36 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:45:38 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:45:59 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:46:02 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:47:30 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:47:50 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:49:38 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:49:39 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:50:21 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:50:22 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:50:23 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:50:24 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:50:25 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:50:25 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:50:27 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:50:28 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:50:29 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:50:29 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:50:29 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:50:29 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:50:29 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:51:45 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:51:55 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:53:00 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:53:01 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 71ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:54:42 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:57:00 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:57:43 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:58:00 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:58:02 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:58:18 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:58:36 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:58:37 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:58:38 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:58:38 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 22:59:53 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:00:01 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:01:12 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:15:15 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `type' for nil:NilClass):
+    29:       <div class="collapse navbar-collapse" id="navbarText">
+    30:         <ul class="navbar-nav mr-auto">
+    31:           <li class="nav-item active">
+    32:               <%if current_user.type == "UserAdmin"%>
+    33:                 Hi Admin : <strong><%= current_user.email %></strong>
+    34:               <%else%>
+    35:                 Hi User : <strong><%= current_user.email %></strong>
+  
+app/views/layouts/application.html.erb:32:in `_app_views_layouts_application_html_erb__2957207517477008117_70022700675400'
+Started PUT "/__web_console/repl_sessions/9955ce558870b6c3f2583de1d6bf370f" for ::1 at 2021-07-15 23:15:32 +0530
+Started PUT "/__web_console/repl_sessions/9955ce558870b6c3f2583de1d6bf370f" for ::1 at 2021-07-15 23:15:37 +0530
+Started GET "/home" for ::1 at 2021-07-15 23:21:40 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:22:48 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:23:02 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:23:06 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:23:34 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:23:42 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flight" for ::1 at 2021-07-15 23:23:54 +0530
+Processing by AirplanesController#flight as HTML
+  Rendering airplanes/flight.html.erb within layouts/application
+  Rendered airplanes/flight.html.erb within layouts/application (95.2ms)
+Completed 200 OK in 132ms (Views: 131.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pnr" for ::1 at 2021-07-15 23:23:59 +0530
+Processing by AirplanesController#pnr as HTML
+  Rendering airplanes/pnr.html.erb within layouts/application
+  Rendered airplanes/pnr.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:24:05 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-07-15 23:24:21 +0530
+Processing by UsersController#verify_login as HTML
+  Rendering users/verify_login.html.erb within layouts/application
+  Rendered users/verify_login.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2021-07-15 23:24:29 +0530
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 49ms (Views: 16.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/flight" for ::1 at 2021-07-15 23:24:40 +0530
+Processing by AirplanesController#flight as HTML
+  Rendering airplanes/flight.html.erb within layouts/application
+  Rendered airplanes/flight.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pnr" for ::1 at 2021-07-15 23:24:47 +0530
+Processing by AirplanesController#pnr as HTML
+  Rendering airplanes/pnr.html.erb within layouts/application
+  Rendered airplanes/pnr.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:24:49 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:26:49 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 204ms (Views: 199.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/airplanes" for ::1 at 2021-07-15 23:26:56 +0530
+Processing by AirplanesController#index as HTML
+  Rendering airplanes/index.html.erb within layouts/application
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.html.erb:17
+  Rendered airplanes/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 42ms (Views: 30.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:27:08 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:28:35 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2021-07-15 23:29:09 +0530
+Processing by UsersController#home as HTML
+  Rendering users/home.html.erb within layouts/application
+  Rendered users/home.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/flight" for ::1 at 2021-07-15 23:29:40 +0530
+Processing by AirplanesController#flight as HTML
+  Rendering airplanes/flight.html.erb within layouts/application
+  Rendered airplanes/flight.html.erb within layouts/application (112.8ms)
+Completed 200 OK in 125ms (Views: 123.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pnr" for ::1 at 2021-07-15 23:29:44 +0530
+Processing by AirplanesController#pnr as HTML
+  Rendering airplanes/pnr.html.erb within layouts/application
+  Rendered airplanes/pnr.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2021-07-15 23:29:48 +0530
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 45ms (Views: 16.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/login" for ::1 at 2021-07-15 23:29:50 +0530
+Processing by UsersController#verify_login as HTML
+  Rendering users/verify_login.html.erb within layouts/application
+  Rendered users/verify_login.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8244566241476132085)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateActiveAdminComments (20210715180207)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (246.5ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" bigserial primary key, "namespace" character varying, "body" text, "resource_type" character varying, "resource_id" bigint, "author_type" character varying, "author_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210715180207_create_active_admin_comments.rb:3
+  [1m[35m (55.7ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments"  ("resource_type", "resource_id")[0m
+  ↳ db/migrate/20210715180207_create_active_admin_comments.rb:3
+  [1m[35m (56.9ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments"  ("author_type", "author_id")[0m
+  ↳ db/migrate/20210715180207_create_active_admin_comments.rb:3
+  [1m[35m (70.2ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_namespace" ON "active_admin_comments"  ("namespace")[0m
+  ↳ db/migrate/20210715180207_create_active_admin_comments.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210715180207"]]
+  ↳ bin/rails:4
+  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8244566241476132085)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for ::1 at 2021-07-15 23:32:43 +0530
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1065ms (Views: 1059.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for ::1 at 2021-07-15 23:32:45 +0530
+Processing by Admin::DashboardController#index as HTML
+  Rendering /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (134.1ms)
+Completed 200 OK in 139ms (Views: 136.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for ::1 at 2021-07-15 23:32:54 +0530
+Processing by Admin::DashboardController#index as HTML
+  Rendering /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (111.7ms)
+Completed 200 OK in 116ms (Views: 114.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/comments" for ::1 at 2021-07-15 23:32:57 +0530
+Processing by Admin::CommentsController#index as HTML
+  Rendering /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = $1[0m  [["namespace", "admin"]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (64.1ms)
+Completed 200 OK in 80ms (Views: 65.3ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/admin/dashboard" for ::1 at 2021-07-15 23:33:00 +0530
+Processing by Admin::DashboardController#index as HTML
+  Rendering /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (52.7ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/comments" for ::1 at 2021-07-15 23:33:11 +0530
+Processing by Admin::CommentsController#index as HTML
+  Rendering /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = $1[0m  [["namespace", "admin"]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (58.1ms)
+Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/dashboard" for ::1 at 2021-07-15 23:33:15 +0530
+Processing by Admin::DashboardController#index as HTML
+  Rendering /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (51.3ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for ::1 at 2021-07-15 23:35:03 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Admin::DashboardController#index as HTML
+  Rendering /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (285.3ms)
+Completed 200 OK in 292ms (Views: 286.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/airplanes" for ::1 at 2021-07-15 23:35:05 +0530
+Processing by Admin::AirplanesController#index as HTML
+  Rendering /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "airplanes" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "airplanes" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "airplanes"[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "airplanes" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT  "airplanes".* FROM "airplanes" ORDER BY "airplanes"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (226.8ms)
+Completed 200 OK in 233ms (Views: 222.9ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/admin/bookings" for ::1 at 2021-07-15 23:35:13 +0530
+Processing by Admin::BookingsController#index as HTML
+  Rendering /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "bookings" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mAirplane Load (0.6ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (92.7ms)
+Completed 200 OK in 98ms (Views: 94.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/comments" for ::1 at 2021-07-15 23:35:16 +0530
+Processing by Admin::CommentsController#index as HTML
+  Rendering /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = $1[0m  [["namespace", "admin"]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "active_admin_comments" WHERE "active_admin_comments"."namespace" = $1 LIMIT $2 OFFSET $3) subquery_for_count[0m  [["namespace", "admin"], ["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."resource_type" FROM "active_admin_comments" ORDER BY resource_type asc[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "active_admin_comments"."author_type" FROM "active_admin_comments" ORDER BY author_type asc[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (58.7ms)
+Completed 200 OK in 68ms (Views: 58.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/admin/payments" for ::1 at 2021-07-15 23:35:18 +0530
+Processing by Admin::PaymentsController#index as HTML
+  Rendering /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "payments" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (61.5ms)
+Completed 200 OK in 72ms (Views: 63.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/admin/users" for ::1 at 2021-07-15 23:35:20 +0530
+Processing by Admin::UsersController#index as HTML
+  Rendering /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-2.6.1/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (79.8ms)
+Completed 200 OK in 96ms (Views: 81.2ms | ActiveRecord: 9.3ms)
+
+

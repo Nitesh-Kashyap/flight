@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flight</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0" />
+  <%= csp_meta_tag %>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', '/stylesheets/flight.css' %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+
+  <div class="menu">
+    <% if params[:controller] != 'welcomes' %>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/home">Nitesh's Flight</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <% if current_user %>
+          <li class="nav-item active">
+            <%if current_user.type == "UserAdmin"%>
+            Hi Admin : <strong><%= current_user.email %></strong>
+            <%else%>
+            Hi User : <strong><%= current_user.email %></strong>
+            <%end%>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Logout", logout_path, :class => 'nav-link' %> 
+          </li>
+          <li class="nav-item">
+            <%if current_user.type == "UserAdmin"%>
+            <%= link_to "New Flight", airplanes_path, :class => 'nav-link' %>
+            <%else%>
+            <%= link_to "Book Tickets", airplanes_path, :class => 'nav-link' %>
+            <%end%>
+          </li>
+          <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", login_path, :class => 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Sign up", new_user_path, :class => 'nav-link' %>
+          </li>
+          <% end %>
+          <li class="nav-item">
+            <%= link_to "PNR", pnr_path, :class => 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Search", flight_path, :class => 'nav-link' %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <% end %>
+  <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+  <%= yield %>
+  <% if params[:controller] != 'welcomes' %>
+  <div class="foot-lnk">
+    <p class="foot-text text-white">Developed by : <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:nitesh.krjs@gmail.com"><strong>nitesh.krjs@gmail.com</strong></a></p>
+  </div>
+  <% end %>
+</body>
+</html>

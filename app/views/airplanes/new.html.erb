@@ -1,0 +1,35 @@
+<br>
+<div class="container">
+	<div class="login-form">
+		<%= bootstrap_form_for @airplane do |f| %>
+		<div class="sign-in-htm">
+			<div class="group">
+				<%= f.text_field :name, class: "input", required: true %>
+			</div>
+			<div class="group">
+				<%#= f.text_field :category, class: "input", required: true %>
+				<%= f.select :category, ['Economy', 'Buisness'], class: "input"%>
+			</div>
+			<div class="group">
+				<%= f.number_field :seats, class: "input", required: true %>
+			</div>
+			<div class="group">
+				<%= f.number_field :rows, class: "input", required: true %>
+			</div>
+			<div class="group">
+				<%= f.text_field :source, class: "input", required: true %>
+			</div>
+			<div class="group">
+				<%= f.text_field :destination, class: "input", required: true %>
+			</div>
+			<div class="group">
+				<%= f.number_field :price, class: :input, step: :any, required: true %>
+			</div>
+			<div class="group">
+				<%= f.submit "Add Flight", class: "button" %>
+			</div>
+			<div class="hr"></div>
+		</div>
+		<%end%>	
+	</div>
+</div>

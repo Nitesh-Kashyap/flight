@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="container h-100 mt-5">
+    <% if @booking %>
+    <h2 class="text-warning">PNR Details for : <%= @booking.pnr if @booking.pnr %></h2>
+    <p>Please find your booking details below.</p>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Details</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Passenger</td>
+        <td><%=@booking.name %></td>
+    </tr>      
+    <tr class="success">
+        <td>Flight</td>
+        <td><%= @booking.airplane.name if @booking.airplane%></td>
+    </tr>
+    <tr class="danger">
+        <td>Category</td>
+        <td><%= @booking.airplane.category if @booking.airplane%></td>
+    </tr>
+    <tr class="info">
+        <td>Source</td>
+        <td><%= @booking.airplane.source if @booking.airplane%></td>
+    </tr>
+    <tr class="warning">
+        <td>Destination</td>
+        <td><%= @booking.airplane.destination if @booking.airplane%></td>
+    </tr>
+    <tr class="active">
+        <td>Status</td>
+        <td class="text-success">Confirmed</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+<% end %>
+

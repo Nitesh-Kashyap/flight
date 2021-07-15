@@ -1,0 +1,24 @@
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Search Flight</label>
+		<div class="login-form">
+			<%= bootstrap_form_for :available, :as => :available, :url => available_path do |f| %>
+			<div class="group">
+				<%= f.label :source%>
+				<input class="input" type="text" name="source" id="source" placeholder="Source" required="true">
+			</div>
+			<div class="group">
+				<%= f.label :destination %>
+				<input class="input" type="text" name="destination" id="destination" placeholder="Destination" required="true">
+			</div>
+			<div class="group">
+				<%= f.select :category, ['Economy', 'Buisness'], class: "input"%>
+			</div>
+			<div class="group">
+				<%= f.submit 'Check Availability' , :class => "button" %>
+			</div>
+			<%end%>
+			<div class="hr"></div>
+		</div>
+	</div>
+</div>

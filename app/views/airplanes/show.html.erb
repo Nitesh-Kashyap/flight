@@ -1,0 +1,47 @@
+<div class="container">
+	<% if @airplane %>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th scope="col">Airline</th>
+				<th scope="col">Category</th>
+				<th scope="col">Source</th>
+				<th scope="col">Destination</th>
+				<th scope="col">Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= @airplane.name if @airplane.name %></td>
+				<td><%= @airplane.category if @airplane.category %></td>
+				<td><%= @airplane.source if @airplane.source %></td>
+				<td><%= @airplane.destination if @airplane.destination %></td>
+				<td><%= @airplane.price if @airplane.price %></td>
+			</tr>
+		</tbody>
+	</table>
+	<% end %>
+
+	<p class=" text-danger py-5"><strong>Please fill the below information to continue booking.</strong> </p>
+	<hr>
+	<div class="login-form">
+		<%= bootstrap_form_for :booking, :url => book_path do |f| %>
+		<%= hidden_field_tag "booking[airplane_id]", @airplane.id if @airplane%>
+		<div class="sign-in-htm">
+			<div class="group">
+				<%= f.text_field :name, class: "input", required: true %>
+			</div>
+			<div class="group">
+				<%= f.number_field :age, class: "input", required: true %>
+			</div>
+			<div class="group">
+				<%= f.text_field :passport_id, class: "input", required: true %>
+			</div>
+			<div class="group">
+				<%= f.submit "Submit", class: "button" %>
+			</div>
+			<div class="hr"></div>
+		</div>
+		<%end%>	
+	</div>
+</div>
