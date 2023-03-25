@@ -1,4 +1,4 @@
-# flight
+# Nitesh Flight
 Flight booking web application.
 
 ## Concept Used
@@ -17,3 +17,5 @@ Flight booking web application.
 - email: dummy@flight.com
 - password: dummy123
 
+
+## Demo video - https://drive.google.com/file/d/1ZPD42r0dbEWu9xH_DVqyBI-Ess1REDBv/view
